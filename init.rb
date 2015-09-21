@@ -5,8 +5,7 @@ Redmine::Plugin.register :remote_login do
   name 'Remote Login plugin'
   description 'This is a plugin for remote login to Redmine'
   version '0.0.1'
-  url 'http://example.com/path/to/plugin'
-  author_url 'http://example.com/about'
+  url 'https://github.com/olemskoi/redmine_remote_login'
 
   author 'Centos-admin.ru'
   author_url 'http://centos-admin.ru'

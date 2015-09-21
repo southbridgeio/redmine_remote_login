@@ -19,7 +19,12 @@ module RemoteLogin
           uri = URI.parse(request.env['HTTP_REFERER'])
           token = Setting.plugin_remote_login['token']
 
-          Base64.decode64(params['authenticity_token']) == "#{token}-#{uri.host}-#{Date.today}"
+          unless Base64.decode64(params['authenticity_token']) == "#{token}-#{uri.host}-#{Date.today}"
+            if logger && log_warning_on_csrf_failure
+              logger.warn "Can't verify CSRF token authenticity"
+            end
+            handle_unverified_request
+          end
         end
       end
     end
