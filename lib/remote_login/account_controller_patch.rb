@@ -17,7 +17,7 @@ module RemoteLogin
 
         def verify_remote_authenticity_token
           uri = URI.parse(request.env['HTTP_REFERER'])
-          token = Setting.plugin_remote_login['token']
+          token = Setting.plugin_redmine_remote_login['token']
 
           unless Base64.decode64(params['authenticity_token']) == "#{token}-#{uri.host}-#{Date.today}"
             if logger && log_warning_on_csrf_failure
