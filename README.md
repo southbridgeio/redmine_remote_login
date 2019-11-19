@@ -1,7 +1,6 @@
 # Redmine Remote Login Plugin
 
-Плагин позволяет авторизоваться в Redmine через форму, расположеннную на другом сайте, как это сделано на сайте
-[Centos-admin.ru](http://centos-admin.ru).
+Плагин позволяет авторизоваться в Redmine через форму, расположеннную на другом сайте.
 
 ## Настройка плагина
 
@@ -30,9 +29,9 @@ token = Settings.redmine_remote_login_token
 
 ```erb
 
-<%= form_tag 'https://factory.southbridge.ru/remote_login',
+<%= form_tag 'https://factory.southbridge.io/remote_login',
               authenticity_token: authenticity_token do %>
 
 ```
 
-Плагин разработан [Centos-admin.ru](http://centos-admin.ru/).
+Плагин разработан [Southbridge](https://southbridge.io).
