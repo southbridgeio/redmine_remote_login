@@ -5,10 +5,10 @@ Redmine::Plugin.register :redmine_remote_login do
   name 'Redmine Remote Login Plugin'
   description 'This is a plugin for remote login to Redmine'
   version '0.0.1'
-  url 'https://github.com/olemskoi/redmine_remote_login'
+  url 'https://github.com/southbridgeio/redmine_remote_login'
 
-  author 'Centos-admin.ru'
-  author_url 'http://centos-admin.ru'
+  author 'Southbridge'
+  author_url 'https://southbridge.io'
   settings(default: {
                'token' => 'cm9ja2V0LWFkbWluOiAyMDE1LTA5LTIx'
            }, partial: 'settings/remote_login_settings')
